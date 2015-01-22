@@ -10,7 +10,7 @@
 
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  return { type: 'Goldfish', brand: 'Pepperidge Farm', flavor: 'Cheddar', count: 2000 };
   //end your code
 }
 
@@ -38,7 +38,41 @@ function returnObjectLiteral() {
 */
 
 //your code here
+function MessageLog(user) {
+	//properties
+	this.user = user
 
+	//variables
+	var messages = new Array(5);
+
+	//methods
+	this.logMessage = function (messageText, direction) {
+		//REFERENCE: stackoverflow.com/questions/18491828/javascript-array-of-key-
+		//value-pairs-uses-literal-variable-name-for-key
+		var messageText = messageText;
+		var direction = direction;
+		var msgPusher = {};
+
+		msgPusher[direction] = messageText;
+		messages.push(msgPusher);
+	};
+
+	this.getSentMessage = function(n) {
+		console.log("get sent message!");
+		/* TODO: stub */
+	};
+
+	this.totalSent = function() {
+		console.log("total sent!");
+		/* TODO: stub */
+	};
+
+	this.totalReceived = function() {
+		console.log("total received!");
+		/* TODO: stub */
+	};
+
+}
 //end your code
 
 /**
@@ -47,7 +81,10 @@ function returnObjectLiteral() {
 * received.
 */
 //your code here
-
+MessageLog.prototype.lastReceivedMessage = function() {
+	/* TODO: stub */
+	return undefined;
+}
 //end your code
 
 /**
