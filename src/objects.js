@@ -40,36 +40,45 @@ function returnObjectLiteral() {
 //your code here
 function MessageLog(user) {
 	//properties
-	this.user = user
-
-	//variables
-	var messages = new Array(5);
+	this.user = user;
+	this.msgList = new Array(5);
+	this.tSent = 0;
+	this.tRec = 0;
 
 	//methods
 	this.logMessage = function (messageText, direction) {
-		//REFERENCE: stackoverflow.com/questions/18491828/javascript-array-of-key-
-		//value-pairs-uses-literal-variable-name-for-key
-		var messageText = messageText;
-		var direction = direction;
-		var msgPusher = {};
-
-		msgPusher[direction] = messageText;
-		messages.push(msgPusher);
+		/* http://stackoverflow.com/questions/5868850/creating-
+		list-of-objects-in-javascript */
+		this.msgList.push({text: messageText, dir: direction});
+		if (direction == 0) {
+			this.tSent++;
+		}
+		else if (direction == 1) {
+			this.tRec++;
+		}
 	};
 
 	this.getSentMessage = function(n) {
-		console.log("get sent message!");
-		/* TODO: stub */
+		var counter = n;
+		var msgText;
+		for (var i = this.msgList.length - 1; i >= 0; i--){
+			if (this.msgList[i].dir == 0) {
+				msgText = this.msgList[i].text;
+				counter--;
+			}
+			if (counter < 0) {
+				break;
+			}
+		}
+		return msgText;
 	};
 
 	this.totalSent = function() {
-		console.log("total sent!");
-		/* TODO: stub */
+		return this.tSent;
 	};
 
 	this.totalReceived = function() {
-		console.log("total received!");
-		/* TODO: stub */
+		return this.tRec;
 	};
 
 }
@@ -82,8 +91,14 @@ function MessageLog(user) {
 */
 //your code here
 MessageLog.prototype.lastReceivedMessage = function() {
-	/* TODO: stub */
-	return undefined;
+	var msgText;
+	for(var i = this.msgList.length - 1; i >= 0; i--) {
+		if(this.msgList[i].dir == 1) {
+			msgText = this.msgList[i].text;
+			break;
+		}
+	}
+	return msgText;
 }
 //end your code
 
