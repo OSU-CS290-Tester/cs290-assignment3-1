@@ -14,7 +14,7 @@
 
 //your code here
 function uselessFunction() {
-	return null;
+  return null;
 }
 //end your code
 
@@ -32,19 +32,19 @@ var barType = typeof bar;
 */
 
 //your code here
-bar = function (doubleArray) { 
-	var success;
-	for (var i = 0; i < doubleArray.length; i++) { 
-		if (isNaN(doubleArray[i])) {
-			success = false;
-		}
-		else {
-			doubleArray[i] *= 2;
-			success = true;
-		}
-	}
-	return success;
-} 
+bar = function(doubleArray) {
+  var success;
+  for (var i = 0; i < doubleArray.length; i++) {
+    if (isNaN(doubleArray[i])) {
+      success = false;
+    }
+    else {
+      doubleArray[i] *= 2;
+      success = true;
+    }
+  }
+  return success;
+};
 //end your code
 
 /**
@@ -55,9 +55,9 @@ bar = function (doubleArray) {
 * @property {string} message - the commit message
 */
 function GitLog(hash, date, message) {
-    this.hash = hash;
-    this.date = date;
-    this.message = message;
+  this.hash = hash;
+  this.date = date;
+  this.message = message;
 }
 
 /**
@@ -81,18 +81,18 @@ function GitLog(hash, date, message) {
 
 //your code here
 function parseGit(logArray) {
-	var gitLogArr = [];
-	for (var i = 0; i < logArray.length; i++) {
-		var str = logArray[i];
-		var idx_date = str.indexOf(" ") + 1;
-		var idx_msg = str.indexOf("\"") + 1;
+  var gitLogArr = [];
+  for (var i = 0; i < logArray.length; i++) {
+    var str = logArray[i];
+    var idx_date = str.indexOf(' ') + 1;
+    var idx_msg = str.indexOf('\"') + 1;
 
-		var hash = str.slice(0, idx_date - 1);
-		var date = new Date(str.slice(idx_date, idx_msg - 1));
-		var msg = str.slice(idx_msg, str.length - 1);
+    var hash = str.slice(0, idx_date - 1);
+    var date = new Date(str.slice(idx_date, idx_msg - 1));
+    var msg = str.slice(idx_msg, str.length - 1);
 
-		gitLogArr.push(new GitLog(hash, date, msg));
-	}
-	return gitLogArr;
+    gitLogArr.push(new GitLog(hash, date, msg));
+  }
+  return gitLogArr;
 }
 //end your code

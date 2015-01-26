@@ -16,7 +16,7 @@ function variableModification(a) {
   //your code here
   plus5 = a + 5;
   asString = String(a);
-  yourNumberIs = "Your Number is " + a;
+  yourNumberIs = 'Your Number is ' + a;
   //end your code
   return [plus5, asString, yourNumberIs, a];
 }

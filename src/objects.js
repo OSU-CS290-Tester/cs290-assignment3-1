@@ -10,7 +10,12 @@
 
 function returnObjectLiteral() {
   //your code here
-  return { type: 'Goldfish', brand: 'Pepperidge Farm', flavor: 'Cheddar', count: 2000 };
+  return {
+    type: 'Goldfish',
+    brand: 'Pepperidge Farm',
+    flavor: 'Cheddar',
+    count: 2000
+  };
   //end your code
 }
 
@@ -39,47 +44,47 @@ function returnObjectLiteral() {
 
 //your code here
 function MessageLog(user) {
-	//properties
-	this.user = user;
-	this.msgList = new Array(5);
-	this.tSent = 0;
-	this.tRec = 0;
+  //properties
+  this.user = user;
+  this.msgList = new Array(5);
+  this.tSent = 0;
+  this.tRec = 0;
 
-	//methods
-	this.logMessage = function (messageText, direction) {
-		/* http://stackoverflow.com/questions/5868850/creating-
-		list-of-objects-in-javascript */
-		this.msgList.push({text: messageText, dir: direction});
-		if (direction == 0) {
-			this.tSent++;
-		}
-		else if (direction == 1) {
-			this.tRec++;
-		}
-	};
+  //methods
+  this.logMessage = function(messageText, direction) {
+  /* http://stackoverflow.com/questions/5868850/creating-
+  list-of-objects-in-javascript */
+    this.msgList.push({text: messageText, dir: direction});
+    if (direction === 0) {
+      this.tSent++;
+    }
+    else if (direction == 1) {
+      this.tRec++;
+    }
+  };
 
-	this.getSentMessage = function(n) {
-		var counter = n;
-		var msgText;
-		for (var i = this.msgList.length - 1; i >= 0; i--){
-			if (this.msgList[i].dir == 0) {
-				msgText = this.msgList[i].text;
-				counter--;
-			}
-			if (counter < 0) {
-				break;
-			}
-		}
-		return msgText;
-	};
+  this.getSentMessage = function(n) {
+    var counter = n;
+    var msgText;
+    for (var i = this.msgList.length - 1; i >= 0; i--) {
+      if (this.msgList[i].dir === 0) {
+        msgText = this.msgList[i].text;
+        counter--;
+      }
+      if (counter < 0) {
+        break;
+      }
+    }
+    return msgText;
+  };
 
-	this.totalSent = function() {
-		return this.tSent;
-	};
+  this.totalSent = function() {
+    return this.tSent;
+  };
 
-	this.totalReceived = function() {
-		return this.tRec;
-	};
+  this.totalReceived = function() {
+    return this.tRec;
+  };
 
 }
 //end your code
@@ -91,15 +96,15 @@ function MessageLog(user) {
 */
 //your code here
 MessageLog.prototype.lastReceivedMessage = function() {
-	var msgText;
-	for(var i = this.msgList.length - 1; i >= 0; i--) {
-		if(this.msgList[i].dir == 1) {
-			msgText = this.msgList[i].text;
-			break;
-		}
-	}
-	return msgText;
-}
+  var msgText;
+  for (var i = this.msgList.length - 1; i >= 0; i--) {
+    if (this.msgList[i].dir == 1) {
+      msgText = this.msgList[i].text;
+      break;
+    }
+  }
+  return msgText;
+};
 //end your code
 
 /**
@@ -109,8 +114,8 @@ MessageLog.prototype.lastReceivedMessage = function() {
 */
 
 //your code here
-var myLog = new MessageLog("BlackHatGuy");
-myLog.logMessage("foo", 1);
-myLog.logMessage("bar", 1);
-myLog.logMessage("baz", 1);
+var myLog = new MessageLog('BlackHatGuy');
+myLog.logMessage('foo', 1);
+myLog.logMessage('bar', 1);
+myLog.logMessage('baz', 1);
 //end your code
