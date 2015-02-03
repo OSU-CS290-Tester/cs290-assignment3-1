@@ -1,3 +1,5 @@
+### Assignment 3 Part 1 ###
+
 Start: Sun, 25 Jan 2015 15:40:00 -0800
 End: Sun, 25 Jan 2015 16:03:58 -0800
 Tasks: minor syntax changes after running gjslint
@@ -13,13 +15,57 @@ End: Sun, 25 Jan 2015 14:29:59 -0800
 Tasks: completed variables; completed message log + prototype addition in objects
 
 
-Start: 
-Wed 21 Jan 2015 15:00:00 -0800
+Start: Wed 21 Jan 2015 15:00:00 -0800
 End: Wed, 21 Jan 2015 16:38:58 -0800
 Tasks: completed object literal, added constructor with stubs for msg log
 
 
 Start: Wed, 21 Jan 2015 12:05:00 -0800
 End: Wed, 21 Jan 2015 14:59:24 -0800
-
 Tasks: completed and verified functions
+
+### Assignment 3 Part 2 ###
+
+Start: Mon, 2 Feb 2015 20:14:00 -0800 
+End: Mon, 2 Feb 2015 20:39:56 -0800 
+Tasks: modified syntax after running gjslint
+
+Start: Mon, 2 Feb 2015 19:51:00 -0800 
+End: Mon, 2 Feb 2015 20:14:08 -0800 
+Tasks: header comments and comment revisions
+
+Start: Mon, 2 Feb 2015 19:27:00 -0800 
+End: Mon, 2 Feb 2015 19:51:01 -0800 
+Tasks: added functionality to remove rows from tables after clicking buttons
+
+Start: Mon, 2 Feb 2015 18:21:00 -0800
+End: Mon, 2 Feb 2015 19:27:02 -0800 
+Tasks: added functions to buttons to add and remove favorites in sessionstorage
+
+Start: Mon, 2 Feb 2015 17:34:00 -0800 
+End: Mon, 2 Feb 2015 18:21:02 -0800 
+Tasks: added function to save results to local storage and clear local storage on new search
+
+Start: Mon, 2 Feb 2015 17:11:00 -0800 
+End: Mon, 2 Feb 2015 17:34:07 -0800 
+Tasks: added favoriting buttons to dynamic table js; added headers and favorites tabl to html
+
+Start: Mon, 2 Feb 2015 15:00:00 -0800  
+End: Mon, 2 Feb 2015 17:11:17 -0800 
+Tasks: added language filtering
+
+Start: Mon, 2 Feb 2015 11:45:00 -0800 
+End: Mon, 2 Feb 2015 12:46:23 -0800 
+Tasks: pagination now returns correct pages; fixed table display to remove old rows on search
+
+Start: Sun, 1 Feb 2015 23:57:00 -0800
+End: Mon, 2 Feb 2015 02:17:14 -0800 
+Tasks: fixing pagination (not complete); changes to html form layout; changes to results display
+
+Start: Sun, 1 Feb 2015 23:13:00 -0800 
+End: Sun, 1 Feb 2015 23:56:19 -0800 
+Tasks: added js to build table from returned results
+
+Start: Sun, 1 Feb 2015 21:07:00 -0800  
+End: Sun, 1 Feb 2015 23:13:24 -0800 
+Tasks: initial commit; returns paged results from url
